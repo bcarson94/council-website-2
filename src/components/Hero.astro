@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon'
 
-const { src = '/ben-carson-headshot2.png' } = Astro.props
+const { src = '/BC_logo.png' } = Astro.props
 ---
 
 <section class="hero my-24">
@@ -9,23 +9,23 @@ const { src = '/ben-carson-headshot2.png' } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot> <span class="text-blue">Ben Carson</span> </slot>
+          <slot> <span class="text-blue"></span> </slot>
         </h1>
         <h2 >
-          <span class="text-blue">Running for</span> <span class="text-yellow">Tippecanoe County Council At-Large.</span>
-          <span class="text-blue">Running for</span> <span class="text-yellow">You.</span>
+          <span class="text-black">Vote for the </span> <span class="text-yellow">Tippecanoe</span> Way.
+          <span class="text-black">Vote for Ben Carson.
         </h2>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
           <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
-            <Icon pack="ion" name="star-outline" />
+            <Icon pack="ion" name="book-outline" />
             Learn more about me
           </a>
           <a
             class="button has-icon color-secondary"
             href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
           >
-            <Icon pack="ion" name="bookmark-outline" />
-            Get in touch with me
+            <Icon pack="ion" name="wallet-outline" color="white"/>
+            <div class="text-yellow">Donate to our campaign</div>
           </a>
         </div>
       </div>
@@ -43,7 +43,7 @@ const { src = '/ben-carson-headshot2.png' } = Astro.props
   }
 
   .text-yellow{
-    color: rgb(213, 159, 15)
+    color: hsl(44, 98%,45%)
   }
 
   .text-blue{
