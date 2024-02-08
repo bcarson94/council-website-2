@@ -33,8 +33,12 @@
   "dependencies": {
     "sharp": "^0.33.2"
   },
-  "resolutions": {
-    "astro/sharp": "0.33.1",
-    "astro-compress/sharp": "0.33.1"
+  "overrides": {
+    "astro-compress": {
+      "sharp": "0.33.1"
+    },
+    "astro": {
+      "sharp": "0.33.1"
+    }
   }
 }
