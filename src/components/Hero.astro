@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon'
 
-const { src = '/BC_logo.png' } = Astro.props
+const { src = '/DSC_2525.webp' } = Astro.props
 ---
 
 <section class="hero my-24">
@@ -15,10 +15,13 @@ const { src = '/BC_logo.png' } = Astro.props
           <span class="text-black">Vote for the </span> <span class="text-yellow">Tippecanoe</span> Way.
           <span class="text-black">Vote for Ben Carson.
         </h2>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+        <div class="flex flex-col gap-3 min-[500px]:flex-row" id = mycustomid>
+          <a href="#test2" class="button has-icon">
+            
+            
             <Icon pack="ion" name="book-outline" />
             Learn more about me
+            
           </a>
           <a
             class="button has-icon color-secondary"
