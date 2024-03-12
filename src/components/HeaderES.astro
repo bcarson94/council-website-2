@@ -1,20 +1,17 @@
 ---
-import Navigation from '../components/Navigation.astro'
+import NavigationES from '../components/NavigationES.astro'
 import { SkipLinks } from 'accessible-astro-components'
 import { Icon } from 'astro-icon'
 ---
 
 <header>
   <SkipLinks />
-  <Navigation>
+  <NavigationES>
     <li class="menu-item">
-      <a href="https://secure.actblue.com/donate/bencarson" target="_blank" rel="noopener noreferrer">Donate</a>
+      <a href="/">Ingles</a>
     </li>
     <li class="menu-item">
-      <a href="https://www.in.gov/sos/elections/voter-information/register-to-vote/" title="Check voting requirements" target="_blank" rel="noopener noreferrer">Vote</a>
-    </li>
-    <li class="menu-item">
-      <a href="/es/">Español</a>
+      <a href="https://secure.actblue.com/donate/bencarson" target="_blank" rel="noopener noreferrer">Donar</a>
     </li>
     <!-- <li class="menu-item has-dropdown">
       <button aria-haspopup="true" aria-expanded="false">Issues</button>
@@ -30,19 +27,21 @@ import { Icon } from 'astro-icon'
         </li>
       </ul>
     </li> -->
-   
+    <li class="menu-item">
+      <a href="https://www.in.gov/sos/elections/voter-information/register-to-vote/" title="Check voting requirements" target="_blank" rel="noopener noreferrer">Votar</a>
+    </li>
     <li class="menu-item type-icon">
-      <a href="https://www.facebook.com/votebencarson" title="Facebook page" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com/votebencarson" title="Facebook" target="_blank" rel="noopener noreferrer">
         <Icon pack="ion" name="logo-facebook" />
       </a>
     </li>
     <li class="menu-item type-icon">
-      <a href="mailto:ben@votecarson.com" title="email me"  rel="noopener noreferrer">
+      <a href="mailto:ben@votecarson.com" title="Contáctame"  rel="noopener noreferrer">
         <Icon pack="ion" name="mail-outline" />
       </a>
     </li>
     <li class="menu-item type-icon">
-      <a href="https://wa.me/17654273199" title="send me a message"  target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/17654273199" title="Contáctame"  target="_blank" rel="noopener noreferrer">
         <Icon pack="ion" name="logo-whatsapp" />
       </a>
     </li>

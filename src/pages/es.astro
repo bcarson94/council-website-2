@@ -1,0 +1,94 @@
+---
+import DefaultLayoutES from '../layouts/DefaultLayoutES.astro'
+import HeroES from '../components/HeroES.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<DefaultLayoutES title="Home">
+  <HeroES />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Haga que el condado Tippecanoe sea más fuerte:</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:hand-heart" title="Ayude a nuestros jóvenes en riesgo.">
+          <br></br>
+          El futuro de nuestro condado depende de nuestros niños. Desafortunadamente, muchos de nuestros jóvenes en riesgo son enviados temporalmente a instalaciones fuera del condado o del estado, separando familias y ocupando a nuestros policías de la carretera en lugar de estar aquí por nuestra seguridad pública. Es imperativo que nos aseguremos de que los niños crezcan de la manera correcta. La rehabilitación debe ser la guía principal de nuestro compromiso con la seguridad pública a largo plazo, y los fondos del condado pueden desempeñar un papel clave para facilitarlo.
+          <br></br>
+        </Feature>
+        <Feature icon="mdi:water-well" title="Proteger nuestra agua y el medio ambiente.">
+          <br></br>
+          El proyecto del Distrito LEAP promete una gran recompensa económica, pero también necesita entre 10 y 100 millones de galones de agua por día de nuestro condado. Necesitamos asegurarnos de que el crecimiento económico esté inteligentemente equilibrado con una conservación que mantenga nuestros sustento de vida, dinero y salud. En términos más generales, debemos utilizar los fondos de nuestro condado para recompensar los esfuerzos de energía renovable que son cada vez más competitivos en costos con las alternativas de combustibles fósiles.
+          <br></br>
+          <!-- <h5><b><a href="/water/">Here's how we can fix it:</a></b></h5> -->
+        </Feature>
+        <Feature icon="mdi:home-group" title="Incentivar la vivienda asequible.">
+          <br></br>
+          Tenemos una grave escasez de inventario de viviendas. Junto con este problema, el aumento de la inflación en todo el país y los continuos desafíos de evaluación de impuestos, debemos hacer uso de nuestros fondos para traer a la zona los desarrolladores adecuados que cumplan con nuestros estándares y cooperen para proporcionar viviendas adecuadas. Al utilizar fondos para incentivar la vivienda para la fuerza laboral y un mayor desarrollo, podemos mejorar nuestra situación de vivienda local para individuos y familias por igual.
+          <br></br>
+          <!-- <h5><b><a href="/mdx-page/">Here's how we can fix it:</a></b></h5> -->
+        </Feature>
+        <h2 class="mb-16 text-6xl">Las buenas políticas requieren una buena planificación.</h2>
+        <Feature icon="mdi:piggy-bank" title="Crear un presupuesto estratégico.">
+          <br></br>
+          Gracias a nuestra economía vibrante y en crecimiento, el condado de Tippecanoe ha generado ingresos fiscales sustanciales. Para aprovechar esto, necesitamos crear una planificación presupuestaria estratégica a largo plazo.
+          <br></br>
+          <!-- <h5><b><a href="/mdx-page/">Here's how we can fix it:</a></b></h5> -->
+        </Feature>
+        <Feature icon="mdi:account-switch" title="Trabajar con la comunidad.">
+          <br></br>
+          La buena formulación de políticas no proviene de un solo cerebro, sino de una amplia variedad de perspectivas, conocimientos y aportes. Estados Unidos necesita líderes con más humildad y voluntad de aprender, dos características que con orgullo pongo sobre la mesa.
+          <br></br>
+          <!-- <h5><b><a href="/mdx-page/">Here's how we can fix it:</a></b></h5> -->
+        </Feature>
+        
+        
+        
+        <Feature icon="mdi:battery-charging" title="Apoya nuestra campaña." >
+          <br></br>
+          <h5><a href="https://secure.actblue.com/donate/bencarson" target="_blank"> Haga clic aquí para ayudar. </a></h5>
+        </Feature>
+        <Feature icon="mdi:vote" title="Asegúrate de estar registrado para votar." >
+          <br></br>
+          <h5><a href="https://indianavoters.in.gov" target ="_blank">Haga clic aquí para comprobarlo.</a></h5>
+        </Feature>
+        <h2 class="mb-16 text-6xl">¿Listo para ayudar?</h2>
+        
+      </div>
+    </div>
+  </section>
+  <ContentMedia imgSrc="ben_in.webp">
+    <h1 id ="test2">Hoosier, nacido y criado.</h1>
+    
+    <p class="text-2xl">
+      Como graduado de West Lafayette High School y Purdue University, tengo vínculos duraderos y una inversión inquebrantable en el futuro de nuestro condado en las próximas décadas. <b>Tippecanoe necesita formar una nueva generación de líderes que estén preparados para mantener fuerte a nuestro condado,</b> una de las principales razones por las que me postulo para las elecciones de 2024.
+    </p>
+  </ContentMedia>
+  <ContentMedia imgSrc="board_of_works_2.webp" reverseImg={true}>
+    
+    <h1>Oyente, pensador y defensor.</h1>
+    <p class="text-2xl">
+      La experiencia importa, pero una nueva perspectiva y la voluntad de aprender también importan. Es mejor dejar la política de partidos en manos de CNN y Fox News; En el condado de Tippecanoe, sabemos cómo unirnos y encontrar puntos en común en temas que interesan a todos. Es por eso que estoy orgulloso de formar parte de la Mesa Directiva de Seguridad y Obras Públicas de West Lafayette, por lo que estoy orgulloso de tener amigos y partidarios que son demócratas y republicanos, y por qué estoy orgulloso de ser voluntario y defender en nombre de las organizaciones locales. y cuestiones, como trabajar para proteger nuestros recursos hídricos y nuestro bienestar.
+    </p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc="purdue_talk.webp">
+
+    <h1 id ="test2">Equipado para encontrar soluciones razonables a nuestros problemas de sentido común.</h1>
+    <p class="text-2xl">
+      He pasado muchos años trabajando en una amplia variedad de industrias, incluyendo la enseñanza, la ingeniería, las comunicaciones, la administración y, más recientemente, creé mi propio negocio en tecnología educativa. Creo que poseo un sólido conjunto de habilidades de conocimiento interdisciplinario que puedo utilizar para encontrar las mejores formas de abordar los desafíos que enfrenta nuestra comunidad. Tirar dinero a nuestros problemas nunca funcionará, ni mirar hacia otro lado. Necesitamos utilizar nuestro presupuesto del condado de manera inteligente, estratégica y responsable que nos ayude a prosperar.</b>
+    </p>
+  </ContentMedia>
+  <section class="mt-64 mb-32">
+    <div class="container">
+      <h2 class = text-center class="mb-16 text-4xl">Vota al estilo Tippecanoe. Vota por Ben Carson.<br></br></h2>
+      <h4 class = text-center class="mb-16 text-4xl"><i>Orgullosamente respaldado por la alcaldesa de West Lafayette, Erin Easter.</i><br></br><br></br></h4>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-2">
+        <Counter count="Martes" title="7 de mayo"  sub="Primaria democrática" />
+        <Counter count="Martes" title="5 de noviembre" sub="Eleccion general" />
+      
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
