@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon'
 
-const { src = '../DSC_2525.webp' } = Astro.props
+const { src = 'DSC_2525.webp' } = Astro.props
 ---
 
 <section class="hero my-24">
@@ -11,18 +11,14 @@ const { src = '../DSC_2525.webp' } = Astro.props
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
           <slot> <span class="text-blue"></span> </slot>
         </h1>
-        <h2 >
+        <h2>
           Vote for the <span class="text-yellow">Tippecanoe</span> Way.
           Vote for Ben Carson.
         </h2>
-        <h4><i>Proudly endorsed by West Lafayette Mayor Erin Easter.</i> </h4>
-        <div class="flex flex-col gap-3 min-[500px]:flex-row" id = mycustomid>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row" id="mycustomid">
           <a href="#test2" class="button has-icon">
-            
-            
             <Icon pack="ion" name="book-outline" />
             Learn more about me
-            
           </a>
           <a
             class="button has-icon color-secondary"
@@ -31,13 +27,125 @@ const { src = '../DSC_2525.webp' } = Astro.props
             <div class="text-yellow">Donate to our campaign</div>
           </a>
         </div>
+       
+        <h3 class="text-center w-full">Proudly endorsed by:</h3>
+        <div class="text-cycler">
+          
+          <button class="prev-button" aria-label="Previous endorsement">
+            <svg viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path d="m14 7-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <span class="text-display">Erin Easter - West Lafayette Mayor</span>
+          <button class="next-button" aria-label="Next endorsement">
+            <svg viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path d="m10 7 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
       </div>
       <img class="hidden lg:block" src={src} alt="" decoding="async" />
     </div>
   </div>
 </section>
 
+<script>
+  console.log("Text cycler script is running");
+
+  const texts = [
+    "Tony Roswarski - Lafayette Mayor",
+    "Erin Easter - West Lafayette Mayor",
+    "Sheila Klinker - State Rep. 27",
+    "Chris Campbell - State Rep. 26",
+    "Angel Valentin - Wabash Township Trustee",
+    "Monica Casanova - Fairfield Township Trustee",
+    "Nancy Nargi - Lafayette City Council",
+    "Perry Brown - Lafayette City Council",
+    "Eileen Hession Weiss - Lafayette City Council",
+    "Bob Downing - Lafayette City Council",
+    "James Blanco - West Lafayette City Council",
+    "Stacey Burr - West Lafayette City Council",
+    "Iris O'Donnell Bellisario - West Lafayette City Council",
+    "Kathy Parker - West Lafayette City Council",
+  ];
+  let currentIndex = 0;
+
+  const textDisplay = document.querySelector('.text-display') as HTMLElement | null;
+  const prevButton = document.querySelector('.prev-button') as HTMLButtonElement | null;
+  const nextButton = document.querySelector('.next-button') as HTMLButtonElement | null;
+
+  function updateText() {
+    if (textDisplay) {
+      textDisplay.textContent = texts[currentIndex];
+      console.log("Text updated to:", texts[currentIndex]);
+    }
+  }
+
+  if (prevButton && nextButton && textDisplay) {
+    console.log("All elements found, adding event listeners");
+    prevButton.addEventListener('click', () => {
+      console.log("Prev button clicked");
+      currentIndex = (currentIndex - 1 + texts.length) % texts.length;
+      updateText();
+    });
+
+    nextButton.addEventListener('click', () => {
+      console.log("Next button clicked");
+      currentIndex = (currentIndex + 1) % texts.length;
+      updateText();
+    });
+
+    // Initialize the text
+    updateText();
+  } else {
+    console.error('One or more elements not found');
+  }
+</script>
+
 <style lang="scss">
+  .text-cycler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    margin-top: 0rem;
+    width: 100%;
+    max-width: 550px; // Adjust this value as needed
+
+    .prev-button,
+    .next-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0rem;
+      color: var(--font-color);
+      transition: color 0.3s ease;
+      flex: 0 0 auto; // Prevent buttons from growing or shrinking
+
+      &:hover {
+        color: var(--action-color-state);
+        transform: scale(1.2);
+      }
+      svg {
+    width: 64px;
+    height: 64px;
+    stroke-width: 2;
+  }
+    }
+
+    .text-display {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--font-color);
+      flex: 1 1 auto; // Allow text to grow and shrink as needed
+      text-align: center;
+      min-width: 0; // Allow text to shrink below its content size
+      overflow: hidden; // Hide overflow
+      text-overflow: ellipsis; // Add ellipsis for overflowing text
+      //white-space: nowrap; // Prevent text from wrapping
+    }
+  }
+
   .text-gradient {
     background: linear-gradient(0.25turn,rgb(0, 15, 93), rgb(213, 159, 15));
     background-clip: border-box;

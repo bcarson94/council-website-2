@@ -35,6 +35,16 @@
       border-color: var(--secondary-400);
     }
   }
+  &.color-white {
+    background-color: white;
+    border-color: black;
+
+    &:hover,
+    &:focus {
+      background-color: white;
+      border-color: black;
+    }
+  }
 
   &.color-neutral {
     background-color: var(--neutral-500);
